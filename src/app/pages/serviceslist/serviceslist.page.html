@@ -1,0 +1,124 @@
+
+ 
+<ion-app>
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar >
+        <ion-title> </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">  
+      <ion-menu-toggle>
+        <ion-item routerLink="/sphome">
+          
+          <ion-label>
+           Home
+          </ion-label>
+          <ion-icon name="home" size="small" slot="start"></ion-icon>
+        </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/spregister-user">
+            <ion-label>
+              Register User
+            </ion-label>
+            <ion-icon name="person-add" size="small" slot="start"></ion-icon>
+          </ion-item>
+        </ion-menu-toggle>
+            <ion-menu-toggle>
+          <ion-item routerLink="/sp-qr-scanner">
+            <ion-label>
+              QR-Scanner
+            </ion-label>
+            <ion-icon name="scan-circle" size="small" slot="start"></ion-icon>
+          </ion-item>
+        </ion-menu-toggle>
+    
+      <ion-menu-toggle>
+          <ion-item routerLink="/sp-invoices">
+            <ion-label>
+              Invoices
+            </ion-label>
+            <ion-icon name="albums" size="small" slot="start"></ion-icon>
+          </ion-item>
+        </ion-menu-toggle>
+    
+      <ion-menu-toggle>
+          <ion-item routerLink="/sp-service-list">
+            <ion-label>
+              Services List
+            </ion-label>
+            <ion-icon name="list" size="small" slot="start"></ion-icon>
+          </ion-item>
+        </ion-menu-toggle>
+      <ion-menu-toggle>
+          <ion-item routerLink="/login">
+            <ion-label>
+               Logout
+            </ion-label>
+            <ion-icon name="log-out" size="small" slot="start"></ion-icon>
+          </ion-item>
+        </ion-menu-toggle>
+      
+    </ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+
+
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-menu-button main="menu" slot="start"></ion-menu-button>
+    <ion-title>   </ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-searchbar [debounce]="1000" (ionChange)="handleChange($event)"></ion-searchbar>
+ 
+<ion-list>
+  <ion-item *ngFor="let result of results">
+    <ion-label>{{ result }}</ion-label>
+  </ion-item>
+</ion-list>
+<ion-content>
+  
+ <!----
+ <ion-list>
+  <ion-item *ngFor="let user of userdata">
+    <h3>{{user.name}}</h3>
+    <p>{{user.username}}</p>
+    <p>{{user.email}}</p>
+    <p>{{user.address}}</p>
+    <p>{{user.phone}}</p>
+
+  </ion-item>
+ </ion-list>
+
+<ion-button (click)="httprun()">list here</ion-button>
+-->
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="schedule" routerLink="/home">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Home</ion-label>
+     
+    </ion-tab-button>
+
+    <ion-tab-button   routerLink="/invoices">
+      <ion-icon name="albums"></ion-icon>
+      <ion-label>Invoices</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button   routerLink="/addservice">
+      <ion-icon name="list"></ion-icon>
+      <ion-label>Services list</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button   routerLink="/offers">
+      <ion-icon name="cash"></ion-icon>
+      <ion-label> Offers/Discount</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+  </ion-content>

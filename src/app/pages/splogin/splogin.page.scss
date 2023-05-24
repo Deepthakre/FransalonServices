@@ -1,0 +1,43 @@
+#bg {
+    height: 50%;
+    width: 500px;
+  
+    background: var(--ion-color-dark) url('https://media.istockphoto.com/id/469090778/photo/interior-of-empty-modern-hair-and-beauty-salon.jpg?b=1&s=170667a&w=0&k=20&c=GGxqz2p8I4PEaMa1OW8sXz06Z0yD-vYsfZA9_nalgjs=') no-repeat center center/cover;
+    border-radius: 0 0 45% 45%;
+    margin-left: -21vw;
+    position: relative;
+}
+ion-fab {
+    ion-icon {
+        font-size: 1.6rem;
+    }
+}
+#bgh{
+    padding-right: 70%;
+    padding-left: 1%;
+    margin-top: 6%;
+}
+
+ion-list {
+    margin-top: 6vh;
+    ion-list-header {
+        font-weight: 1000;
+        font-size: 1.5rem;
+    }
+    ion-list-header {
+        font-weight: 900;
+       font-size: 1.5rem;
+        color: #001e5a;
+   }
+    ion-item {
+        border: 1px solid var(--ion-color-light);
+        border-radius: 20px;
+        -webkit-box-shadow: 0 6px 4px -4px var(--ion-color-medium);
+        -moz-box-shadow: 0 6px 4px -4px var(--ion-color-medium);
+        box-shadow: 0 6px 4px -4px var(--ion-color-medium);
+    }
+    p {
+        font-size: 0.8rem;
+        padding-left: 5vw;
+    }
+}

@@ -1,0 +1,76 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-title>   </ion-title>
+    <ion-icon name="close" slot="end" size="larger" class="ion-padding" (click)="dismis()"></ion-icon>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content >
+  <ion-card> 
+    <ion-list lines="none" class="ion-margin">
+    
+      <ion-item class="ion-margin">
+        <ion-label  position="floating" >Name </ion-label><br>
+        <ion-input [(ngModel)]="itemName"  placeholder="Enter Your Name"></ion-input>
+     </ion-item>
+     <ion-item  class="ion-margin">
+      <ion-icon name="calendar-outline"slot="start"></ion-icon>
+      <ion-label position="floting" >Dob </ion-label>
+      <ion-input type="date" [(ngModel)]="itemDueDate"></ion-input>
+     
+    </ion-item>
+    <ion-item class="ion-margin">
+      <ion-label position="floating" >Contact Number </ion-label>
+      <ion-input  type="text"[(ngModel)]="itemcontact"  placeholder="Contact Number"></ion-input>
+   </ion-item>
+   <ion-item class="ion-margin">
+    <ion-label position="floating" > Email Id   </ion-label>
+    <ion-input [(ngModel)]="itememail"  placeholder="Enter Email Id"></ion-input>
+  </ion-item>
+  <ion-item class="ion-margin">
+    <ion-label  position="floating" >Password </ion-label>
+    <ion-input type="password" [(ngModel)]="itempass"  placeholder=" Enter Password"></ion-input>
+  </ion-item>
+      <ion-item  class="ion-margin">
+       <ion-label >Gender</ion-label>
+       <ion-select [(ngModel)]="itemPriority">
+         <ion-select-option value="low">Male</ion-select-option>
+         <ion-select-option value="middle">Female</ion-select-option>
+         
+        </ion-select>
+     </ion-item>
+    
+     
+   
+ 
+  <ion-item class="ion-margin">
+    <ion-label  position="floating" >Confirm Password </ion-label>
+    <ion-input [(ngModel)]="itemconfirmpassword"  placeholder="Enter Confirm Password"></ion-input>
+  </ion-item>
+  
+ 
+ 
+<!-- 
+   <ion-item>
+     <ion-icon name="pricetag-outline" slot="start"></ion-icon>
+     <ion-label> Category</ion-label>
+     <span>{{categorySelectedCategory}}</span>
+   </ion-item><br><br>
+ 
+   <ion-item>
+     <ion-chip  *ngFor="let tag of categories; let i = index" color="secondary" outline="true" (click)="selectCategory(i)">
+       <ion-label color="secondary">{{tag}}</ion-label>
+     </ion-chip>
+ 
+   </ion-item> -->
+
+   <ion-button class="ion-margin" expand="block" (click)="update()" color="dark">SAVE</ion-button>
+
+ </ion-list>
+</ion-card>
+</ion-content>
+ 
+
+ 
+

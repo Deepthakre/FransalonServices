@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button main1="menu" slot="start"></ion-menu-button>
+    <ion-title> Spregister </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">UserName</ion-label>
+      <ion-input
+        type="text"
+        name="name"
+        [(ngModel)]="data.name"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">DOB</ion-label>
+      <ion-input
+        type="date"
+        name="dob"
+        [(ngModel)]="data.dob"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Contact Number</ion-label>
+      <ion-input
+        maxlength="10"
+        type="text"
+        name="mobileNo"
+        [(ngModel)]="data.mobileNo"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input
+        type="text"
+        name="emailId"
+        [(ngModel)]="data.emailId"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input
+        maxlength="8"
+        type="password"
+        name="password"
+        [(ngModel)]="data.password"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Confirm Password</ion-label>
+      <ion-input
+        maxlength="8"
+        type="password"
+        name="confpass"
+        [(ngModel)]="data.confpass"
+        required
+      ></ion-input>
+    </ion-item><br>
+
+    <ion-item>
+      <ion-label>Gender</ion-label>
+      <ion-select
+        class="custom-options"
+        interface="popover"
+        [(ngModel)]="data.gender"
+        name="gender"
+      >
+        <ion-select-option value="brown" class="brown-option"
+          >male</ion-select-option
+        >
+        <ion-select-option value="blonde">Female</ion-select-option>
+        <ion-select-option value="black">unisex</ion-select-option> </ion-select
+      ><br />
+    </ion-item>
+
+    <ion-col>
+      <ion-button
+        type="submit"
+        color="dark"
+        (click)="doSubmitForm()"
+        expand="block"
+      >
+        signup</ion-button
+      >
+    </ion-col>
+  </form>
+</ion-content>

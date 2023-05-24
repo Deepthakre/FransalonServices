@@ -1,0 +1,105 @@
+  
+<ion-content [fullscreen]="true">
+  <div id="bg">
+    <ion-fab vertical="top" edge horizontal="end"   id="bgh">
+      <ion-fab-button color="white" routerLink="/wel">
+        <ion-icon name="close-outline" color="medium"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </div>
+  <ion-list lines="none" class="ion-margin" >
+    <ion-list-header>Vendor Login !</ion-list-header>
+    <ion-item class="ion-margin">
+      <ion-input placeholder="Enter Username" type="text" clearInput="true" [(ngModel)]="loginForm.email"> </ion-input>
+    </ion-item>
+    <ion-item class="ion-margin">
+      <ion-input placeholder="Enter Password" type="password" clearInput="true" [(ngModel)]="loginForm.password"></ion-input>
+    </ion-item>
+    <ion-text color="info"><p class="ion-margin-horizontal" routerLink="/forgot">Forgot Password?</p></ion-text>
+    <div align="right">
+      <ion-button shape="round" strong="true" class="ion-margin-end" color="dark"  (click)="login()">
+         LOG IN
+        <!-- routerLink="/tabs"  -->
+        <ion-icon name="log-in" slot="end"></ion-icon> 
+      </ion-button>
+    </div>
+  </ion-list>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+<!-- <ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> VENDOR LOGIN</ion-card-title>
+    </ion-card-header>
+ 
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input
+        type="email"
+        required
+        [(ngModel)]="loginForm.email"
+      ></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input
+        type="password"
+        required
+        [(ngModel)]="loginForm.password"
+      ></ion-input> </ion-item
+    ><br /><br />
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="dark" expand="block" (click)="login()"
+          >Login</ion-button
+        >
+
+        <a  routerLink="/forgot"  >Forgot Password?</a>
+      </ion-col> -->
+
+
+
+<!----VGDWEGRYWERYEWGRYGERYRGYGRYERGTYTYRYRTYTYYURY MODAL>
+
+       <ion-col>
+        <ion-button type="submit" color="primary" expand="block"  routerLink="/signup" >Register</ion-button>
+       
+      </ion-col>-->
+    <!-- </ion-row> -->
+    <!-- </form> -->
+  <!-- </ion-card>
+</ion-content> -->
+<!-- <ion-modal #modal trigger="open-modal">
+  <ng-template
+ 
+    <ion-list lines="none" class="ion-margin">
+    <ion-list-header>    Forgot Password!</ion-list-header>
+    <ion-item class="ion-margin">
+      <ion-input placeholder="Enter  Email Id" type="text" clearInput="true"  > </ion-input>
+    </ion-item>
+    <ion-item class="ion-margin">
+      <ion-input placeholder="New Password" type="password" clearInput="true"  ></ion-input>
+    </ion-item>
+    <ion-item class="ion-margin">
+      <ion-input placeholder=" Confirm Password" type="password" clearInput="true"  ></ion-input>
+    </ion-item>
+ 
+    <div align="right">
+      <ion-button shape="round" strong="true" class="ion-margin-end" color="dark">
+   Submit
+   
+        <ion-icon name="log-in" slot="end"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-list>
+  </ng-template>
+</ion-modal> -->

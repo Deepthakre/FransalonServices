@@ -1,0 +1,46 @@
+ion-card-header{
+    text-align: center;
+ 
+}
+ion-card{
+    height: 95%;
+  
+    align-items: center;
+
+}
+ion-card-title{
+    font-weight:1000;
+ 
+}
+ion-button{
+    font-weight: 500;
+    
+  
+}
+ion-card-content{
+
+    margin-top: 5%;
+}
+img{
+     width: 80%;
+    height: 60%;
+    margin-left: 25%;
+    // margin-right: 40%;
+    padding-right: 30%;
+}
+@media Only screen and (max-width:600px){
+    img{
+       width: 100%;
+       height: 50%;
+       margin: 0%;
+       padding: 0%;
+    }
+}
+#bg {
+    height: 20%;
+    width: 500px;
+    // background: var(--ion-color-dark) url('https://www.shutterstock.com/image-illustration/modern-interior-design-salon-3d-600w-602081057.jpg') no-repeat center center/cover;
+    border-radius: 0 0 45% 45%;
+    margin-left: -21vw;
+    position: relative;
+}

@@ -1,0 +1,42 @@
+ 
+<ion-header  >
+  <ion-toolbar color="dark">
+    <ion-menu-button main1="menu" slot="start"></ion-menu-button>
+    <ion-title> Scanner </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content
+  [fullscreen]="true"
+  [style.--background]="scanActive?'#00000000':'#ffffff'"
+>
+  <ion-button expand="full" (click)="startScanner(true)" [hidden]="scanActive">
+    SCAN
+  </ion-button>
+  <ion-row class="scan-button" [hidden]="!scanActive">
+    <ion-col class="ion-no-padding">
+      <ion-button expand="full" (click)="stopScanner()">Stop</ion-button>
+    </ion-col>
+  </ion-row>
+  <div class="scan-box" [hidden]="!scanActive"></div>
+
+
+
+</ion-content>
+<ion-modal [isOpen]="isModalOpen">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Modal</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="cancel(false)">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <p>
+        {{textOutput}}
+      </p>
+    </ion-content>
+  </ng-template>
+</ion-modal>

@@ -1,0 +1,134 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Registration </ion-title>
+    <ion-back-button slot="start"></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating"> GST/Gumasta No</ion-label>
+      <ion-input type="text" [(ngModel)]="data.gstNo"name="gstNo"  required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating"> Store Name</ion-label>
+      <ion-input type="text" name="storeName" [(ngModel)]="data.storeName" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Store Address</ion-label>
+      <ion-input type="text" name="storeAddress" [(ngModel)]="data.storeAddress" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating"> Owner Name</ion-label>
+      <ion-input type="text" name="name" [(ngModel)]="data.name" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Date</ion-label>
+      <ion-input type="date" name="dob" [(ngModel)]="data.dob" required></ion-input> </ion-item
+    ><br />
+
+    <ion-item>
+      <ion-label>Gender</ion-label>
+      <ion-select class="custom-options" interface="popover" name="gender" [(ngModel)]="data.gender">
+        <ion-select-option value="Male" class="brown-option">Male</ion-select-option>
+        <ion-select-option value="Female">Female</ion-select-option>
+        <ion-select-option value="Unisex">Unisex</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating"> Home Address</ion-label>
+      <ion-input type="text" name="homeAddress" [(ngModel)]="data.homeAddress" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating"> Contact Number </ion-label>
+      <ion-input type="text" name="mobileNo" [(ngModel)]="data.mobileNo" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating"> Alternate Contact Number </ion-label>
+      <ion-input type="text" name="alternateMobileNo" [(ngModel)]="data.alternateMobileNo" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" name="emailId" [(ngModel)]="data.emailId" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" name="password" [(ngModel)]="data.password" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating"> Adhar No. </ion-label>
+      <ion-input type="text" name="aadharNo" [(ngModel)]="data.aadharNo" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating"> Pan Number </ion-label>
+      <ion-input type="text" required></ion-input> </ion-item
+    ><br />
+    <ion-item>
+      <ion-label>Store Type</ion-label>
+      <ion-select class="custom-options" interface="popover" >
+        <ion-select-option value="Male" class="brown-option">Male</ion-select-option>
+        <ion-select-option value="Female">Female</ion-select-option>
+        <ion-select-option value="Unisex">Unisex</ion-select-option>
+      </ion-select> </ion-item
+    ><br />
+    <ion-item>
+      <ion-label>Store Category</ion-label>
+      <ion-select class="custom-options" interface="popover" [(ngModel)]="data.storeCategory" name="storeCategory">
+        <ion-select-option value="Platinum" class="brown-option">Platinum</ion-select-option>
+        <ion-select-option value="Gold">Gold</ion-select-option>
+        <ion-select-option value="Silver">Silver</ion-select-option>
+      </ion-select> </ion-item
+    ><br />
+   
+    <ion-item>
+      <ion-label>Sales Report  </ion-label>
+      <ion-select class="custom-options" interface="popover">
+        <ion-select-option value="brown" class="brown-option"
+          >Monthly</ion-select-option
+        >
+        <ion-select-option value="blonde">Quarterly</ion-select-option>
+        <ion-select-option value="black">Annually</ion-select-option>
+      </ion-select>
+    </ion-item><br />
+    <ion-item>
+      <ion-label>Revenue Reports</ion-label>
+      <ion-select class="custom-options" interface="popover">
+        <ion-select-option value="brown" class="brown-option"
+          >Monthly</ion-select-option
+        >
+        <ion-select-option value="blonde">Quarterly</ion-select-option>
+        <ion-select-option value="black">Annually</ion-select-option>
+      </ion-select>
+    </ion-item> 
+    <ion-item lines="none">
+      <ion-label position="floating" disabled>Bank Details:</ion-label>
+     
+     </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Bank Name</ion-label>
+      <ion-input type="text" name="bankName" [(ngModel)]="data.bankName" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Account No.</ion-label>
+      <ion-input type="number" name="accountNo" [(ngModel)]="data.accountNo" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">IFSC code</ion-label>
+      <ion-input type="text" name="ifscCode" [(ngModel)]="data.ifscCode" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Branch</ion-label>
+      <ion-input type="text" name="name" [(ngModel)]="data.branch" required></ion-input>
+    </ion-item>
+     
+    <br /> 
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="dark" expand="block" (click)="doSubmitForm()">Register</ion-button
+        >
+        <ion-button></ion-button>
+        <!----<a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>-->
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

@@ -1,0 +1,147 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-menu-button main="menu" slot="start"></ion-menu-button>
+    <ion-title> </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+ 
+ 
+  <ion-card>
+    <ion-slides #slider loop="true" pager="true"[options]="slideOptions" (ionSlideTouchEnd)="slideChanged()">
+      <ion-slide>
+        <img alt="slide-1"src="https://media.istockphoto.com/id/1136206577/photo/man-getting-hair-washed-at-hairdresser.jpg?s=612x612&w=0&k=20&c=6BxEROpfli1nDNCP7xIhdOgqASYspKSxC-UlEz-WTbA=" height="40%"/>
+ 
+      </ion-slide>
+      <ion-slide>
+        <img alt="slide-2" src="https://media.istockphoto.com/id/851007946/photo/woman-getting-hair-shampooed-at-salon.jpg?b=1&s=170667a&w=0&k=20&c=1869mjAAf8EMPjTR0mOjIBBI-iVxbK4jw8mNHUEy5KE=" height="40%"/>
+ 
+      </ion-slide>
+      <ion-slide>
+        <img alt="slide-3" src="https://media.istockphoto.com/id/1280171251/photo/hair-dresser-drying-costumers-hair-owner-and-customer-wearing-protective-face-mask-for.jpg?b=1&s=170667a&w=0&k=20&c=Jlry2fYqsT1jwveddpXU5ssdHvZ5JfoHRgeTPDk5TN0=" height="40%"/>
+ 
+      </ion-slide>
+      <ion-slide>
+        <img alt="slide-4" src="https://images.unsplash.com/photo-1534297635766-a262cdcb8ee4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHNhbG9uJTIwc2VydmljZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" height="40%"/>
+      </ion-slide>
+    </ion-slides>
+   
+ 
+ 
+ 
+ 
+  
+ 
+ 
+  </ion-card>
+  <!-- <ion-button fill="clear" color="danger">Book Service</ion-button> -->
+ 
+    <ion-item *ngFor="let item of UData " >
+
+  <ion-badge slot="end" color="warning"> {{item.percent}}</ion-badge>
+  <ion-label><h2><b>{{item.name}}</b></h2> 
+  <h3>{{item.rate}}: </h3>
+</ion-label>
+</ion-item>
+ 
+<!--  
+<ion-item>
+  <ion-badge slot="end"> </ion-badge>
+  <ion-label><h2><b>Massage</b></h2>
+    <h3>Rate:$900</h3>
+    </ion-label>
+</ion-item>
+ 
+ 
+<ion-item>
+  <ion-badge slot="end" color="warning">5%</ion-badge>
+  <ion-label> <h2><b>Tanning </b></h2>
+    <h3>Rate:$500</h3>  </ion-label>
+</ion-item>
+ 
+<ion-item>
+  <ion-badge slot="end" color="danger">5%</ion-badge>
+ 
+  <ion-label> <h2><b>Keratin Straightening </b></h2>
+    <h3>Rate:$7000</h3>  </ion-label>
+</ion-item>
+ 
+<ion-item>
+  <ion-badge slot="end"></ion-badge>
+ 
+  <ion-label> <h2><b> Body Treatment </b></h2>
+    <h3>Rate:$900</h3>  </ion-label>
+</ion-item>
+ 
+<ion-item>
+  <ion-badge slot="end"></ion-badge>
+  
+  <ion-label> <h2><b>  Straightening & Smoothing   </b></h2>
+    <h3>Rate:$5000</h3>  </ion-label>
+</ion-item> -->
+<!-- <ion-item>
+  <ion-badge slot="end"></ion-badge>
+ 
+  <ion-label> <h2><b>   Manicures & Pedicures   </b></h2>
+    <h3>Rate:$800</h3>  </ion-label>
+</ion-item>
+<ion-item>
+  <ion-badge slot="end"></ion-badge>
+  
+  <ion-label> <h2><b>  Facial Treatments    </b></h2>
+    <h3>Rate:$900</h3>  </ion-label>
+</ion-item>
+<ion-item>
+  <ion-badge slot="end" color="warning">5%</ion-badge>
+ 
+ <ion-label> <h2><b>  Beard Services   </b></h2>
+    <h3>Rate:$100</h3>  </ion-label>
+</ion-item>
+<ion-item>
+  <ion-badge slot="end"></ion-badge>
+ 
+  <ion-label> <h2><b>   Threading     </b></h2>
+    <h3>Rate:$500</h3>  </ion-label>
+</ion-item>
+<ion-item>
+  <ion-badge slot="end"></ion-badge>
+ 
+  <ion-label> <h2><b>   Bleach     </b></h2>
+    <h3>Rate:$700</h3>  </ion-label>
+</ion-item>
+ 
+<ion-item>
+  <ion-badge slot="end" color="danger"> 4%</ion-badge>
+  
+   
+  <ion-label> <h2><b>   colouring and styling     </b></h2>
+    <h3>Rate:$2000</h3>  </ion-label>
+</ion-item>
+  -->
+</ion-content>
+  <!----tabs-->
+<!-- <ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button   routerLink="/home">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Home</ion-label>
+     
+    </ion-tab-button>
+
+    <ion-tab-button   routerLink="/invoices">
+      <ion-icon name="albums"></ion-icon>
+      <ion-label>Invoices</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button   routerLink="/addservice">
+      <ion-icon name="list"></ion-icon>
+      <ion-label>Services list</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button   routerLink="/offers">
+      <ion-icon name="cash"></ion-icon>
+      <ion-label> Offers/Discount</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs> -->

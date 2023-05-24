@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar color="light ">
+    <ion-menu-button main="menu" slot="start"></ion-menu-button>
+    <ion-title> </ion-title>
+    <!-- <ion-avatar slot="end">
+      <img  src="https://www.shutterstock.com/image-vector/default-avatar-profile-social-media-260nw-1920331226.jpg" height="30%"/> 
+    </ion-avatar> -->
+
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+ <ion-card>
+ 
+<form>
+  <ion-item lines="full">
+    <ion-label position="floating"> Name</ion-label>
+    <ion-input type="text" [(ngModel)]="data.name"  name="name"required></ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label position="floating">Dob</ion-label>
+    <ion-input type="date"   name="dob" required></ion-input>
+  </ion-item>
+  <ion-item lines="full">
+    <ion-label position="floating"> Contact number</ion-label>
+    <ion-input type="number" [(ngModel)]="data.contact"   name="contact"></ion-input>
+  </ion-item>
+  <ion-item lines="full">
+    <ion-label position="floating">Email</ion-label>
+    <ion-input type="text" [(ngModel)]="data.email" name="email"></ion-input>
+  </ion-item>
+  <ion-item lines="full">
+    <ion-label position="floating">Password</ion-label>
+    <ion-input type="password" [(ngModel)]="data.password"  name= "password" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Gender</ion-label>
+    <ion-select
+      class="custom-options"
+      interface="popover"
+  
+      name="gender"
+    >
+      <ion-select-option value="brown" class="brown-option"
+        >male</ion-select-option
+      >
+      <ion-select-option value="blonde">Female</ion-select-option>
+      <ion-select-option value="black">unisex</ion-select-option> </ion-select
+    ><br />
+  </ion-item>
+  <ion-item lines="full">
+    <ion-label position="floating"> Address</ion-label>
+    <ion-input type="text" required   name="address"></ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label position="floating"> Adhar Number </ion-label>
+    <ion-input type="text" required   name="aadharNo"> </ion-input>
+  </ion-item>
+
+  <br />
+  <ion-item>
+    <ion-label>Disignation</ion-label>
+    <ion-select class="custom-options" interface="popover"   name="disignation">
+      <ion-select-option value="Platinum" class="brown-option">software dev</ion-select-option>
+      <ion-select-option value="Gold">engineer</ion-select-option>
+ </ion-select> </ion-item>
+  <ion-item lines="full">
+    <ion-label position="floating"  name="role"> Role </ion-label>
+    <ion-input type="text" required></ion-input> </ion-item>
+
+ <ion-button
+        type="submit"
+        color="dark"
+       expand="block"
+        
+        (click)="doSubmitForm()"
+        >Register</ion-button >
+      <!----<a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>-->
+  
+</form>
+
+ 
+</ion-card>
+</ion-content>
+ 

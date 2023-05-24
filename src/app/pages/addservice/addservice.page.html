@@ -1,0 +1,120 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-menu-button main="menu" slot="start"></ion-menu-button>
+    <ion-title> Add Service</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+ 
+  <div id="bg"></div>
+
+  <ion-content class="ion-padding">
+
+ 
+   
+ 
+<!--         
+   <ion-button   color="dark"  expand="full"  fill="outline"  (click)="setOpen(true)"> Attendance List  </ion-button>  -->
+    
+  
+       
+    
+    
+<!--  
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button (click)="setOpen(true)" color="dark">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab> -->
+
+    <ion-button class="btn" expand="full" (click)="setOpen(true)" fill="outline" color="dark">Add Service</ion-button>
+    <ion-modal [isOpen]="isModalOpen">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title> </ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="setOpen(false)">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+    
+ <ion-card>
+  <ion-card-content> 
+       
+
+        <ion-item>
+          <ion-label position="floating"> Product Name </ion-label>
+          <ion-input
+            type="text"
+            [(ngModel)]="data.product"
+            name="name"
+            required
+          ></ion-input>
+        </ion-item><br>
+        <ion-item>
+          <ion-label position="floating">Price </ion-label>
+          <ion-input
+            type="text"
+            [(ngModel)]="data.price"
+            name="name"
+            required
+          ></ion-input>
+        </ion-item><br>
+
+        <ion-item>
+          <ion-label position="floating">Discount</ion-label>
+          <ion-input
+            type="text"
+            [(ngModel)]="data.discount"
+            name="name"
+            required
+          ></ion-input>
+        </ion-item><br>
+        <ion-item>
+          <ion-label position="floating">Net Amount</ion-label>
+          <ion-input
+            type="text"
+            [(ngModel)]="data.net"
+            name="name"
+            required
+          ></ion-input>
+        </ion-item><br>
+      
+         <ion-button 
+          (click)="Submit()"
+          color="dark"
+          expand="block"
+          
+        
+          >Add Service</ion-button
+        >  </ion-card-content></ion-card>
+      </ng-template>
+    </ion-modal>
+  </ion-content>
+    <!---tabs--->
+  
+    <!-- <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button   routerLink="/home">
+          <ion-icon name="home"></ion-icon>
+          <ion-label>Home</ion-label>
+         
+        </ion-tab-button>
+    
+        <ion-tab-button   routerLink="/invoices">
+          <ion-icon name="albums"></ion-icon>
+          <ion-label>Invoices</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button   routerLink="/addservice">
+          <ion-icon name="list"></ion-icon>
+          <ion-label>Services list</ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button   routerLink="/offers">
+          <ion-icon name="cash"></ion-icon>
+          <ion-label> Offers/Discount</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs> -->

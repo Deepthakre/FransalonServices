@@ -1,0 +1,64 @@
+
+
+<ion-content [fullscreen]="true">
+  <div id="bg">
+    <ion-fab vertical="top" edge horizontal="end" slot="fixed" id="bgh">
+      <ion-fab-button color="white" routerLink="/wel">
+        <ion-icon name="close-outline" color="medium"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </div>
+  <ion-list lines="none" class="ion-margin">
+    <ion-list-header>  Service Provider   !</ion-list-header>
+    <ion-item class="ion-margin">
+      <ion-input placeholder="Enter Username" type="text" clearInput="true" [(ngModel)]="loginForm.email"> </ion-input>
+    </ion-item>
+    <ion-item class="ion-margin">
+      <ion-input placeholder="Enter Password" type="password" clearInput="true" [(ngModel)]="loginForm.password"></ion-input>
+    </ion-item>
+    <!-- <ion-text color="medium"><p class="ion-margin-horizontal">Forgot Password?</p></ion-text> -->
+    <div align="right">
+      <ion-button shape="round" strong="true" class="ion-margin-end" color="dark"  (click)="login()">
+         LOG IN
+        <!-- routerLink="/tabs"  -->
+        <ion-icon name="log-in" slot="end"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-list>
+</ion-content>
+
+<!--  
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button color="dark"></ion-back-button>
+      </ion-buttons>
+      <ion-title>    </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>SERVICE PROVIDER  LOGIN</ion-card-title>
+      </ion-card-header>
+ 
+      <ion-item lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" required [(ngModel)]="loginForm.email"></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" required [(ngModel)]="loginForm.password"></ion-input>
+      </ion-item><br><br>
+      <ion-card-content>
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="dark"  expand="block" (click)="login()">Login</ion-button>
+          <a   class="small-text" >Forgot Password?</a>
+        </ion-col>
+       
+      </ion-row>
+      </ion-card-content>
+  
+    </ion-card>
+  </ion-content> -->
